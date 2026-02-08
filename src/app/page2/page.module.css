@@ -1,0 +1,64 @@
+.container {
+  height: 100vh;
+  background: linear-gradient(180deg, #fff0f4, #ffe1ea);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.6rem;
+  color: #ff4d6d;
+  text-align: center;
+}
+
+.subText {
+  margin: 20px 0 40px;
+  color: #ff7a90;
+  text-align: center;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 30px;
+  position: relative;
+}
+
+.btn {
+  width: 160px;
+  height: 60px;
+  border-radius: 40px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.yes {
+  background: linear-gradient(135deg, #ff5f7e, #ff85a1);
+  color: white;
+}
+
+.no {
+  background: #ffd6de;
+  color: #ff4d6d;
+}
+
+/* 🎥 Stickers */
+.sticker {
+  position: fixed;
+  width: 150px;
+  z-index: 10;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
