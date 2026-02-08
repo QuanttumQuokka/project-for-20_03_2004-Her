@@ -1,0 +1,132 @@
+.container {
+  height: 100vh;
+  background: radial-gradient(circle, #111, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ❤️ Falling hearts */
+.hearts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  top: -10%;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(110vh) scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Existing styles (UNCHANGED) */
+.envelope {
+  width: 260px;
+  height: 160px;
+  background: linear-gradient(135deg, #ff8fa3, #ff5d8f);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 40px rgba(255, 100, 150, 0.5);
+  animation: pulse 2s infinite;
+  z-index: 1;
+}
+
+.circle {
+  width: 56px;
+  height: 56px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+.tap {
+  margin-top: 12px;
+  color: #fff;
+  opacity: 0.9;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.letter {
+  max-width: 520px;
+  background: rgba(255,255,255,0.06);
+  padding: 40px;
+  border-radius: 22px;
+  line-height: 1.8;
+  box-shadow: 0 0 60px rgba(255, 120, 160, 0.35);
+  animation: fadeIn 1.5s ease;
+  z-index: 1;
+}
+
+.letter h2 {
+  color: #ff7aa2;
+  margin-bottom: 20px;
+}
+
+.fade {
+  display: block;
+  margin-top: 20px;
+  color: #ff9ebd;
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nextBtn {
+  margin-top: 28px;
+  padding: 14px 36px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff5f8a, #ff8fb3);
+  color: white;
+  box-shadow: 0 0 25px rgba(255, 120, 160, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nextBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 140, 180, 0.7);
+}
